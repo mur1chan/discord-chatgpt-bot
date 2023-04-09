@@ -23,7 +23,7 @@ async def on_ready():
 async def chat(ctx, *, message: str):
     prompt = openai.Completion.create(
         engine="text-davinci-002",
-        prompt=f"Ein Benutzer auf Discord fragt: '{message}'. Du bist ein allwissender Mentor und kannst mir bei allem helfen.",
+        prompt=f"{message}",
         max_tokens=2048,
         temperature=0.5,
         )
